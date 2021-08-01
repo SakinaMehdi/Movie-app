@@ -33,14 +33,15 @@ app.post("/", function(req, res){
          const director = movieData.Director;
          const imdb = movieData.imdbRating;
          const genre = movieData.Genre;
-
+         const poster= movieData.Poster;
 
          res.write("<h1> The name of your favourite movie is:" + name +"</h1>");
          res.write ("<p> Release Date: " + releaseDate +"<p>");
          res.write("<p> Directed By: " + director + "<p>");
          res.write("<p> Rating: " + imdb + "<p>");
          res.write("<p> Genre: " + genre + "<p>");
-
+         res.write("<img src=" +posterUrl + ">");
+            
          res.send();
         });
         
